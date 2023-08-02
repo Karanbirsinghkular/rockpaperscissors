@@ -28,3 +28,15 @@ body{
     text-align: center;
     box-shadow: 2px 1px 1px white;
 }
+
+#current{
+    margin-top: 40px;
+    font-size: x-large;
+    text-align: center;
+}
+
+#scorecard{
+    margin-top: 80px;
+    font-size: 30px;
+    text-align: center;
+}

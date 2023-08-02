@@ -2,6 +2,14 @@ let playerWins = 0;
 let computerWins = 0;
 let round_num = 1;
 
+const current = document.querySelector("#current");
+const playerScore = document.querySelector("#playerScore");
+const computerScore = document.querySelector("#computerScore");
+
+current.textContent = "Please start playing";
+playerScore.textContent = playerWins;
+computerScore.textContent = computerWins;
+
 function getComputerChoice(){
     let choice = Math.floor(Math.random() * 3)
     if (choice == 0){    
@@ -19,7 +27,7 @@ function play(playerChoice){
     computerChoice = getComputerChoice();
     playerChoice = playerChoice.toLowerCase();
     if (playerChoice == computerChoice){
-        console.log(`No one wins Round ${round_num}, the player and computer both chose ${computerChoice}, the same round will start again`);
+        current.textContent = `No one wins Round ${round_num}, the player and computer both chose ${computerChoice}, the same round will start again`;
         return 0;
     }
     let winner;
@@ -41,7 +49,7 @@ function play(playerChoice){
         winnerchoice = computerChoice;
         loserchoice = playerChoice;
     }
-    console.log(`The winner of Round ${round_num} is ${winner}, ${winnerchoice} beats ${loserchoice}`);
+    current.textContent =`The winner of Round ${round_num} is ${winner}, ${winnerchoice} beats ${loserchoice}`;
     return winner == "player" ? 1 : 2;
 }
 
@@ -58,6 +66,8 @@ function game(playerChoice){
         computerWins += 1;
         round_num += 1;
     }
+    playerScore.textContent = playerWins;
+    computerScore.textContent = computerWins;
 }
 
 
