@@ -73,7 +73,7 @@ function game(playerChoice){
     playerScore.textContent = playerWins;
     computerScore.textContent = computerWins;
 
-    if (playerWins == 2 || computerWins == 2){
+    if (playerWins == 3 || computerWins == 3){
         for(let choice of choices){
             choice.style.pointerEvents = "none";
         }
