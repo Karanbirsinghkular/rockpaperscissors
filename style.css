@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: black;
+}
+
+.header{
+    display: flex;
+   justify-content: center;
+   font-size: xx-large;
+   padding-bottom: 5px;
+   border-bottom: 2px solid white;
+}
+
+.choices{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.choice {
+    border: 2px solid white;
+    margin-left: 20px;
+    padding: 10px;
+    cursor: default;
+    width: 50px;
+    text-align: center;
+    box-shadow: 2px 1px 1px white;
+}
