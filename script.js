@@ -5,6 +5,10 @@ let round_num = 1;
 const current = document.querySelector("#current");
 const playerScore = document.querySelector("#playerScore");
 const computerScore = document.querySelector("#computerScore");
+const choices = document.querySelectorAll(".choice");
+const result = document.querySelector("#result");
+const winner = document.querySelector("#winner");
+
 
 current.textContent = "Please start playing";
 playerScore.textContent = playerWins;
@@ -68,6 +72,20 @@ function game(playerChoice){
     }
     playerScore.textContent = playerWins;
     computerScore.textContent = computerWins;
+
+    if (playerWins == 2 || computerWins == 2){
+        for(let choice of choices){
+            choice.style.pointerEvents = "none";
+        }
+        if (playerWins > 1){
+            winner.textContent = "player";
+        }
+        else{
+            winner.textContent = "computer";
+        }
+        result.style.color = "orangered";
+        result.style.textDecorationColor = "orangered";
+    }
 }
 
 
